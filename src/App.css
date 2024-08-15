@@ -1,0 +1,66 @@
+/* Base layout styling */
+.app-container {
+  display: flex;
+  height: 100vh;
+  position: relative; /* Necessary for correct layout when sidebar overlaps */
+}
+.nav-content{
+    width: calc(100vw - 80px);
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  background-color: #14213D;
+  color: #ffffff;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 101;
+  position: fixed; /* Fix sidebar position to overlap content */
+  /* top: 50px;  */
+  left: 0; /* Align sidebar to the left */
+}
+
+/* Default collapsed width */
+.sidebar-content {
+  width: 80px;
+}
+
+/* Expanded width */
+.sidebar-content.navCollapse {
+  width: 250px;
+}
+
+.sidebar-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Main content area */
+.main-content {
+  margin-left: 80px; /* Default margin for collapsed sidebar */
+  transition: margin-left 0.3s ease;
+  /* padding: 20px; */
+  width: calc(100vw - 80px);
+  height: calc(100vh - 80px);
+  /* Use a flex basis to ensure it adjusts with the sidebar */
+  flex: 1;
+}
+
+
+/* Adjust margin and width when sidebar is expanded */
+/* .app-container .sidebar-content.navCollapse + .main-content {
+  margin-left: 250px; 
+  width: calc(100vw - 250px); 
+} */
+
+/* Optional media query to ensure responsiveness */
+@media screen and (min-width: 768px) {
+  .navCollapse .sidebar-content {
+    width: 250px;
+  }
+  .main-content {
+    width: calc(100vw - 80px); /* Ensure this width on larger screens */
+  }
+}
