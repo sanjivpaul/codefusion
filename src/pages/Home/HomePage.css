@@ -3,7 +3,7 @@
 }
 .banner img {
   width: 100%;
-  height: 550px;
+  height: 50vh;
 }
 
 .section-1 {
@@ -227,10 +227,32 @@
 
 .footer-social-icon {
   margin-right: 15px;
-  color:#DDDDDD;
+  color: #dddddd;
 
   &:hover {
     color: #14213d;
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .banner img {
+    height: 210px; /* Height for small devices */
+  }
+
+  .section-1 {
+    height: 150px; /* Adjust other sections for small devices */
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .banner img {
+    height: 340px; /* Height for medium devices */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .banner img {
+    height: 535px; /* Height for large devices */
   }
 }

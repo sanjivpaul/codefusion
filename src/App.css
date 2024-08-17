@@ -2,7 +2,7 @@
 .app-container {
   display: flex;
   height: 100vh;
-  position: relative; /* Necessary for correct layout when sidebar overlaps */
+  position: relative; 
 }
 .nav-content{
     width: calc(100vw - 80px);
@@ -19,7 +19,6 @@
   overflow-x: hidden;
   z-index: 101;
   position: fixed; /* Fix sidebar position to overlap content */
-  /* top: 50px;  */
   left: 0; /* Align sidebar to the left */
 }
 
@@ -48,12 +47,6 @@
   flex: 1;
 }
 
-
-/* Adjust margin and width when sidebar is expanded */
-/* .app-container .sidebar-content.navCollapse + .main-content {
-  margin-left: 250px; 
-  width: calc(100vw - 250px); 
-} */
 
 /* Optional media query to ensure responsiveness */
 @media screen and (min-width: 768px) {

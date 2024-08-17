@@ -3,7 +3,9 @@ import "./NotePage.css"
 
 function NotePage() {
   return (
-    <div>NotePage</div>
+    <div className='note-container'>
+      <h2>Note</h2>
+    </div>
   )
 }
 
