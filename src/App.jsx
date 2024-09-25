@@ -9,6 +9,7 @@ import ContactPage from "./pages/Contact/ContactPage";
 import CourcePage from "./pages/Cource/CourcePage";
 import NotePage from "./pages/Notes/NotePage";
 import CodeEditor from "./pages/IDE/CodeEditor";
+import CourceDetails from "./pages/IDE/courceDetails/CourceDetails";
 
 function App() {
   const navCollapse = useSelector((state) => state.sidebar.showSidebar);
@@ -28,6 +29,7 @@ function App() {
             <Route path="/feedback" element={<FeedbackPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/cource" element={<CourcePage />} />
+            <Route path="/cource/details" element={<CourceDetails />} />
             <Route path="/note" element={<NotePage />} />
             <Route path="/ide" element={<CodeEditor />} />
           </Routes>

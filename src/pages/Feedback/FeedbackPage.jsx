@@ -51,6 +51,15 @@ function FeedbackPage() {
       feedbackTitle: "This is feedback title",
       feedback: "This is feedback",
     },
+
+    {
+      username: "Debesh",
+      avatar: "",
+      time: "2 Hourse ago",
+      tags: ["DSA", "Back Tracking", "Very Satisfied"],
+      feedbackTitle: "This is feedback title",
+      feedback: "This is feedback",
+    },
   ];
   return (
     <div className="feedback-container">
