@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import banner from "../../assets/banner/banner.png";
+// import banner from "../../assets/banner/banner.png";
+import banner from "../../assets/banner/banner4.png";
 import "./HomePage.css";
 import {
   FaAngleDoubleDown,
@@ -16,6 +17,15 @@ import { RiInstagramFill } from "react-icons/ri";
 import { IoLogoDiscord } from "react-icons/io5";
 // import { FaArrowRightLong } from "react-icons/fa6";
 import { TbBulb } from "react-icons/tb";
+import DSA from "../../assets/images/DSA.png";
+import apptitude from "../../assets/images/apptitude.png";
+import ai from "../../assets/images/ai.png";
+import Typewriter from "../../components/Typewriter/Typewriter";
+import laptop from "../../assets/icons/gears.png";
+import time from "../../assets/icons/time-adn-date.png";
+import bulb from "../../assets/icons/bulb.png";
+import pencil from "../../assets/icons/color-pencil.png";
+import { useNavigate} from "react-router-dom";
 
 const testimonials = [
   {
@@ -43,6 +53,7 @@ const testimonials = [
 ];
 
 function HomePage() {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const goToSlide = (index) => {
@@ -66,17 +77,64 @@ function HomePage() {
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, [nextSlide]);
 
+  const itemCount = 5;
+  const keyframes = `
+    @keyframes scrollUp {
+      ${Array.from(
+        { length: itemCount - 1 },
+        (_, i) => `
+        ${(i + 1) * 25 - 10}% {
+          transform: translateY(${(-100 / itemCount) * (i + 1)}%);
+        }
+        ${(i + 1) * 25}% {
+          transform: translateY(${(-100 / itemCount) * (i + 1)}%);
+        }
+      `
+      ).join("")}
+    }
+  `;
+
+  // Create a style element for keyframes
+  const style = document.createElement("style");
+  style.appendChild(document.createTextNode(keyframes));
+  document.head.appendChild(style);
+
   return (
     <div className="home-container">
       <div className="banner">
         <img src={banner} />
+        <div className="scrolling-words-container">
+          <div className="scrolling-words-box">
+            <ul>
+              <li style={{ color: "#ea4335" }}>Code</li>
+              <li style={{ color: "#4285f4" }}>Build</li>
+              <li style={{ color: "#34a853" }}>Learn</li>
+              <li style={{ color: "#fbbc04" }}>Succeed</li>
+              <li style={{ color: "#ea4335" }}>Code</li>
+            </ul>
+          </div>
+          <span className="for-everyone">for everyone</span>
+        </div>
+        {/* <div className="typewriter">
+          <Typewriter
+            phrases={[
+              "Hi, I'm Si.",
+              "I am Creative.",
+              "I Love Design.",
+              "I Love to Develop.",
+            ]}
+            period={2000}
+          />
+        </div> */}
+        <button className="learning-btn"> Start Learning Now</button>
       </div>
+
       <section className="section-1">
         <div className="start-learning">
-          <div className="start-learning-btn">
+          {/* <div className="start-learning-btn">
             <p>Start Learning Now</p>
             <FaArrowRightLong size={20} color="#ffffff" />
-          </div>
+          </div> */}
         </div>
 
         <div className="scroll-down">
@@ -94,23 +152,23 @@ function HomePage() {
         </div>
         <div className="small-card">
           <h3>12K+</h3>
-          <h5>Students</h5>
+          <h5>Course</h5>
         </div>
         <div className="small-card">
-          <h3>12K+</h3>
-          <h5>Students</h5>
+          <h3>10K+</h3>
+          <h5>Notes</h5>
         </div>
         <div className="small-card">
-          <h3>12K+</h3>
-          <h5>Students</h5>
+          <h3>2k+</h3>
+          <h5>Tutor's</h5>
         </div>
         <div className="small-card">
-          <h3>12K+</h3>
-          <h5>Students</h5>
+          <h3>1K+</h3>
+          <h5>Videos</h5>
         </div>
         <div className="small-card">
-          <h3>12K+</h3>
-          <h5>Students</h5>
+          <h3>11K+</h3>
+          <h5>Review</h5>
         </div>
       </section>
 
@@ -124,7 +182,7 @@ function HomePage() {
           </div>
         </div>
         <div className="s3-cources">
-          <h3>Recommended for you</h3>
+          {/* <h3 >Recommended for you</h3> */}
           {/* <div className="s3-card-container">
             <div className="s3-card">
               <div className="s3-card-top">
@@ -149,7 +207,7 @@ function HomePage() {
 
       {/* section-7 */}
 
-      <section className="section-7">
+      {/* <section className="section-7">
         <div className="sec-7-container">
           <div className="sec-7-heading">
             <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
@@ -197,6 +255,71 @@ function HomePage() {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptates fuga fugit enim
               </p>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      {/* secionn advertiser */}
+
+      <section id="advertisers" className="advertisers-service-sec">
+        <div className="container-advertisers">
+          <div className="row-advertiser">
+            <div className="section-header">
+              <h2>
+                Recommended for
+                <span style={{ color: "#FF1783" }}> you </span>
+              </h2>
+            </div>
+          </div>
+
+          <div className="row-advertiser-cards">
+            <div
+              className="card-advertiser"
+              onClick={() => {
+                // alert("dsa");
+                navigate("/cource/topics");
+              }}
+            >
+              <div className="service-card">
+                <div className="icon-wrapper">
+                  {/* <i className="fa-solid fa-chart-line"></i> */}
+                  <img className="icon-wrapper-img" src={DSA} alt="DSA" />
+                </div>
+                <h3>Data Structures & Algorithm</h3>
+                <p>
+                  Data structures and algorithms optimize data organization,
+                  enhancing efficiency in programming tasks.
+                </p>
+              </div>
+            </div>
+
+            <div className="card-advertiser">
+              <div className="service-card">
+                <div className="icon-wrapper">
+                  {/* <i className="fa-solid fa-chart-line"></i> */}
+                  <img className="icon-wrapper-img" src={apptitude} alt="DSA" />
+                </div>
+                <h3>Apptitude & Reasoning</h3>
+                <p>
+                  Aptitude and reasoning skills assess problem-solving abilities
+                  and critical thinking in situations.
+                </p>
+              </div>
+            </div>
+
+            <div className="card-advertiser">
+              <div className="service-card">
+                <div className="icon-wrapper">
+                  {/* <i className="fa-solid fa-chart-line"></i> */}
+                  <img className="icon-wrapper-img" src={ai} alt="DSA" />
+                </div>
+                <h3>AI Interview</h3>
+                <p>
+                  AI interviews assess candidate skills, including
+                  problem-solving, coding, and system design capabilities.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -299,124 +422,81 @@ function HomePage() {
         </div>
       </section>
 
-      {/* <section className="features-section-main">
+      <section className="features-section-main">
         <div className="features-title">
           <h1>About website learner</h1>
         </div>
         <div className="features-section">
           <div className="features-item">
             <div className="features-icon">
-              <svg
+              <img
+                style={{ height: 60, widows: 60, marginTop: 10 }}
+                src={time}
+                alt=""
+              />
+              {/* <svg
                 class="features-vector"
                 viewBox="0 0 512 512"
                 width="100"
                 fill="#fff"
               >
                 <path d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z" />
-              </svg>
+              </svg> */}
             </div>
 
             <h3 className="features title">Webbdesign</h3>
             <p className="features-text">
-              Skapar en mockup över er hemsida kommer att se ut, därefter kommer
-              ni att ta del av prototypen.
+              "Our platform consolidates everything you need in one place,
+              eliminating the hassle of switching between different tools.
+              Learn, code, and practice seamlessly within the same platform,
+              saving you time and boosting your productivity."
             </p>
           </div>
 
           <div className="features-item">
             <div className="features-icon">
-              <div
+              {/* <div
                 class="features-vector"
                 viewBox="0 0 512 512"
                 width="100"
                 fill="#fff"
               >
-
                 <span>
                   <TbBulb color="#ffffff" size={50} />
                 </span>
-              </div>
+              </div> */}
+              <img style={{ height: 60, widows: 60 }} src={bulb} alt="" />
             </div>
 
             <h3 className="features title">Webbdesign</h3>
             <p className="features-text">
-              Skapar en mockup över er hemsida kommer att se ut, därefter kommer
-              ni att ta del av prototypen.
+              "Enhance your skills by coding in three different languages with
+              three integrated code editors. Whether you're practicing interview
+              questions or working on projects, our platform allows you to
+              sharpen your coding skills effectively in a dynamic environment."
             </p>
           </div>
 
           <div className="features-item">
             <div className="features-icon">
-              <svg
+              <img style={{ height: 60, widows: 60 }} src={pencil} alt="" />
+              {/* <svg
                 class="features-vector"
                 viewBox="0 0 512 512"
                 width="100"
                 fill="#fff"
               >
                 <path d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z" />
-              </svg>
+              </svg> */}
             </div>
 
             <h3 className="features title">Webbdesign</h3>
             <p className="features-text">
-              Skapar en mockup över er hemsida kommer att se ut, därefter kommer
-              ni att ta del av prototypen.
+              "Gain access to course videos, related notes, and a wide range of
+              practice questions tailored to your learning goals. From mastering
+              concepts to preparing for real-world interviews, our platform
+              offers the resources to ensure you're fully prepared."
             </p>
-          </div>
-        </div>
-      </section> */}
-
-      {/* secionn advertiser */}
-
-      <section id="advertisers" className="advertisers-service-sec">
-        <div className="container-advertisers">
-          <div className="row-advertiser">
-            <div className="section-header">
-              <h2>
-                Our <span>Advertiser </span>Services
-              </h2>
-            </div>
-          </div>
-
-          <div className="row-advertiser-cards">
-            <div className="card-advertiser">
-              <div className="service-card">
-                <div className="icon-wrapper">
-                  <i className="fa-solid fa-chart-line"></i>
-                </div>
-                <h3>Tracking Lead</h3>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Quisquam consequatur necessitatibus eaque.
-                </p>
-              </div>
-            </div>
-
-            <div className="card-advertiser">
-              <div className="service-card">
-                <div className="icon-wrapper">
-                  <i className="fa-solid fa-chart-line"></i>
-                </div>
-                <h3>Tracking Lead</h3>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Quisquam consequatur necessitatibus eaque.
-                </p>
-              </div>
-            </div>
-
-            <div className="card-advertiser">
-              <div className="service-card">
-                <div className="icon-wrapper">
-                  <i className="fa-solid fa-chart-line"></i>
-                </div>
-                <h3>Tracking Lead</h3>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Quisquam consequatur necessitatibus eaque.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>

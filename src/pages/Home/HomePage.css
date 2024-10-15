@@ -4,7 +4,97 @@
 .banner img {
   width: 100%;
   height: 50vh;
+
 }
+
+.banner {
+  position: relative;
+  display: flex;
+}
+
+.scrolling-words-container {
+  position: absolute;
+  top: 340px;
+  left: 70px;
+  height: 6vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* background-color: rebeccapurple; */
+}
+
+.scrolling-words-container {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+
+  /* overflow: hidden; */
+  /* height: 50px; */
+}
+
+.scrolling-words-box {
+  display: inline-block;
+  height: 3rem;
+  /* margin: auto; */
+  overflow: hidden;
+  background: none;
+
+  ul {
+    /* margin: 0 0.625rem; */
+    /* padding: 0; */
+    animation: scrollUp 4s infinite;
+    li {
+      /* display: flex; */
+      /* align-items: center; */
+      /* justify-content: flex-end; */
+      /* height: 3rem; */
+      /* list-style: none; */
+      margin-bottom: -20px;
+    }
+  }
+}
+
+.for-everyone {
+  color: #ffffff;
+  align-self: center;
+}
+
+.learning-btn {
+  position: absolute;
+  left: 60px;
+  top: 450px;
+
+  background-color: #2c7bfe;
+  width: 200px;
+  height: 45px;
+  border-radius: 10px;
+  color: #FFFFFF;
+
+  &:hover{
+    color: #FFFFFF;
+    background-color: #2762d6;
+  }
+}
+
+.typewriter{
+  position: absolute;
+  left: 60px;
+  top: 550px;
+}
+
+/* // Variables */
+/* $item-count: 5;
+
+@keyframes scrollUp {
+  @for $i from 1 through ($item-count - 1) {
+    #{($i * 25) - 10%}, #{$i * 25%} {
+      transform: translateY((-100% / $item-count) * $i);
+    }
+  }
+} */
 
 .section-1 {
   width: 100%;
@@ -22,7 +112,7 @@
 .start-learning-btn {
   width: 280px;
   height: 50px;
-  background-color: #fca311;
+  background-color: #13087e;
   border-radius: 10px;
   padding-left: 20px;
 
@@ -99,7 +189,7 @@
 
 .small-card h3 {
   font-size: 45px;
-  color: #fca311;
+  color: #092199;
 }
 .small-card h5 {
   font-size: 18px;
@@ -121,7 +211,7 @@
 }
 
 .s3-greeting h3 {
-  color: #fca311;
+  color: #092199;
   font-size: 30px;
 }
 
@@ -133,7 +223,7 @@
 .s3-explore-btn {
   width: 200px;
   height: 45px;
-  background-color: #fca311;
+  background-color: #092199;
   color: #ffffff;
   border-radius: 7px;
   margin-top: 45px;
@@ -155,6 +245,10 @@
 .s3-cources {
   margin-top: 25px;
   margin-left: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .s3-cources h3 {
@@ -794,7 +888,7 @@ main h1 {
   margin: 5px;
   margin-bottom: 1.25rem; /* ändra detta */
   width: 270px;
-  height: 10rem;
+  height: 16rem;
   padding: 30px;
   border-radius: 0.5rem;
   position: relative;
@@ -851,6 +945,7 @@ main h1 {
   padding-top: 10px;
   padding-bottom: 10px;
   height: 550px;
+  margin-bottom: 50px;
 }
 
 .container-advertisers {
@@ -926,8 +1021,8 @@ main h1 {
   position: relative;
   margin: auto;
   font-size: 30px;
-  height: 2.5em;
-  width: 2.5em;
+  height: 4.5em;
+  width: 4.5em;
   color: #ffffff;
   border-radius: 50%;
   display: grid;
@@ -936,13 +1031,19 @@ main h1 {
   z-index: 3;
 }
 
+.icon-wrapper-img {
+  height: 4.5em;
+  width: 4.5em;
+  border-radius: 50%;
+}
+
 .advertisers-service-sec .service-card:hover:after {
   top: 0%;
 }
 
 .service-card .icon-wrapper {
   background-color: #ffffff;
-  color: rgb(255, 23, 131);
+  color: #ff1783;
 }
 
 .advertisers-service-sec .service-card:hover .icon-wrapper {
@@ -962,11 +1063,11 @@ main h1 {
 .section-7 {
   width: 100%;
   height: 500px;
-  background-color: #C4D7FF;
+  background-color: #c4d7ff;
   padding: 10px;
 }
 
-.sec-7-container{
+.sec-7-container {
   padding: 10px;
 
   display: flex;
@@ -974,10 +1075,10 @@ main h1 {
   align-items: center;
 }
 
-.sec-7-heading{
+.sec-7-heading {
   width: 15%;
   height: 400px;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -986,14 +1087,14 @@ main h1 {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.sec-7-view-more{
+.sec-7-view-more {
   background-color: #2c7bfe;
   padding: 10px;
   border-radius: 7px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-.sec-7-cards{
+.sec-7-cards {
   width: 25%;
   height: 400px;
   background-color: #ffffff;
@@ -1005,7 +1106,7 @@ main h1 {
   border-radius: 7px;
 }
 
-.sec-7-card-img{
+.sec-7-card-img {
   width: 90%;
   height: 45%;
   background-color: teal;
@@ -1014,13 +1115,13 @@ main h1 {
   margin-bottom: 10px;
 }
 
-.sec-7-card-img img{
+.sec-7-card-img img {
   width: 100%;
   height: 100%;
   border-radius: 7px;
   object-fit: cover;
 }
 
-.sec-7-card-details{
+.sec-7-card-details {
   padding: 10px;
 }

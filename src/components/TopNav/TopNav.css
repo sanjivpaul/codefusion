@@ -75,10 +75,22 @@ ul li {
   height: 40px;
   border-radius: 7px;
   color: #ffffff;
-  background-color: #fca311;
+  background-color: #092199;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.explore-btn-nav{
+  width: 180px;
+  height: 40px;
+  border-radius: 7px;
+  color: #ffffff;
+  background-color: #092199;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 767px) {

@@ -1,9 +1,18 @@
-#Array{
-    padding: 40px;
+#Array {
+  width: 100%;
+  /* background-color: teal; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 .array-section {
   display: flex;
   flex-direction: column;
+  width: 55%;
+  /* background-color: orange; */
 }
 
 /* content_box */

@@ -45,9 +45,10 @@ function TopNav() {
       </div>
 
       <div className="top-right">
-        <div className="explore-btn">
+        <button className="explore-btn-nav">Explore Cources</button>
+        {/* <div className="explore-btn">
           <p>Explore Cources</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
