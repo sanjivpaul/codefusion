@@ -97,7 +97,10 @@ function CourceTopic() {
                     <button
                       className="btn-bottom"
                       id="btn-second"
-                      onClick={toggleEditor}
+                      // onClick={toggleEditor}
+                      onClick={()=>{
+                        navigate("/cource/practice");
+                      }}
                     >
                       {/* {showEditor ? "Close Code Editor" : "Open Code Editor"} */}
                       PracQ

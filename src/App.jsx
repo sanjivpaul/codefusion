@@ -13,6 +13,7 @@ import CourceDetails from "./pages/IDE/courceDetails/CourceDetails";
 import CourceTopic from "./pages/Cource/CourceTopic";
 import Array from "./pages/Cource/Array/Array";
 import YoutubeVidePlayer from "./components/YoutubeVideoPlayer/YoutubeVidePlayer";
+import PracticeQuestion from "./pages/PracticeQuestions/PracticeQuestion";
 
 function App() {
   const navCollapse = useSelector((state) => state.sidebar.showSidebar);
@@ -35,6 +36,7 @@ function App() {
             <Route path="/cource/topics" element={<CourceTopic/>}/>
             <Route path="/cource/topics/array" element={<Array/>}/>
             <Route path="/cource/details" element={<CourceDetails />} />
+            <Route path="/cource/practice" element={<PracticeQuestion />} />
             <Route path="/note" element={<NotePage />} />
             <Route path="/ide" element={<CodeEditor />} />
             <Route path="/video-player" element={<YoutubeVidePlayer />} />
