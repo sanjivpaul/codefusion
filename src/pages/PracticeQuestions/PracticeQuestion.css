@@ -40,7 +40,7 @@
 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -67,6 +67,7 @@
   margin: 16px 0;
   padding: 12px 24px 12px 60px;
 }
+
 .notes:before {
   float: left;
   font-size: 30px;
@@ -78,104 +79,133 @@
   margin-left: -46px;
   margin-top: -10px;
 }
+
 .notes1:before {
   color: #21a796;
-  content: "\f2c4"".";
+  content: "\f2c4" ".";
 }
+
 .notes1 {
   background: #cfffe6;
   color: #565656;
 }
+
 .notes1 {
   height: 35px;
 }
+
 .notes1 {
   width: 650px;
 }
+
 .notes2:before {
   color: #f95060;
-  content: "\f2c4"".";
+  content: "\f2c4" ".";
 }
+
 .notes2 {
   background: #f9bfc5;
   color: #565656;
 }
+
 .notes2 {
   height: 35px;
 }
+
 .notes2 {
   margin-top: 35px;
 }
+
 .notes2 {
   width: 650px;
 }
+
 .notes3:before {
   color: #2387c1;
-  content: "\f2c4"".";
+  content: "\f2c4" ".";
 }
+
 .notes3 {
   background: #c8d9e2;
   color: #565656;
 }
+
 .notes3 {
   height: 35px;
 }
+
 .notes3 {
   margin-top: 35px;
 }
+
 .notes3 {
   width: 650px;
 }
+
 .notes4:before {
   color: #1aa687;
-  content: "\f2c4"".";
+  content: "\f2c4" ".";
 }
+
 .notes4 {
   background: #6dedd0;
   color: #565656;
 }
+
 .notes4 {
   height: 35px;
 }
+
 .notes4 {
   margin-top: 35px;
 }
+
 .notes4 {
   width: 650px;
 }
+
 .notes5:before {
   color: #f63a50;
-  content: "\f2c4"".";
+  content: "\f2c4" ".";
 }
+
 .notes5 {
   background: #fb818f;
   color: #fff;
 }
+
 .notes5 {
   height: 35px;
 }
+
 .notes5 {
   margin-top: 35px;
 }
+
 .notes5 {
   width: 650px;
 }
+
 .notes6:before {
   color: #f7871a;
-  content: "\f2c4"".";
+  content: "\f2c4" ".";
 }
+
 .notes6 {
   background: #f5b474;
   color: #fff;
 }
+
 .notes7:before {
   color: #969696;
-  content: "\f2c4"".";
+  content: "\f2c4" ".";
 }
+
 .notes7 {
   background: #f5f68e;
   color: #565656;
 }
+
 /* Anamasi Note Box*/
 .notes1:hover:before,
 .notes2:hover:before,
@@ -193,6 +223,7 @@
   -o-animation: ripple 0.65s linear;
   animation: ripple 0.65s linear;
 }
+
 @keyframes ripple {
   100% {
     opacity: 0;
@@ -200,7 +231,92 @@
   }
 }
 
+/* .button-container {
+  position: relative;
+}
+
+.hidden-buttons {
+  display: none;
+
+  position: absolute;
+  top: 100%;
+
+  left: 0;
+  background-color: white;
+
+  border: 1px solid #ccc;
+
+  z-index: 1;
+
+}
+
+.next-button:hover {
+  background-color: #ffb703;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.next-button:hover+.hidden-buttons {
+  display: block;
+
+}
+
+.hidden-buttons .btn {
+  margin: 5px 0;
+
+} */
+
+.button-container {
+  position: relative;
+  width: 12%;
+  background-color: #0D92F4;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.hidden-buttons {
+  position: absolute;
+  top: 100%;
+  /* Position below the next button */
+  left: 0;
+  background-color: white;
+  /* Adjust as needed */
+  border: 1px solid #ccc;
+  /* Optional styling */
+  z-index: 1;
+  /* Ensure it appears above other content */
+  border-radius: 10px;
+  width: 110px;
+  padding: 10px 0px 10px 0px;
+  margin-top: 5px;
+}
+
 .next-button {
+  cursor: pointer;
+  /* Indicate it's clickable */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.next-button:hover {
+  /* background-color: #ffb703; */
+  transform: translateY(-2px);
+  outline: none;
+  color: #c8d9e2
+}
+
+.hidden-buttons .btn {
+  margin: 5px 0;
+  /* Spacing between buttons */
+  cursor: pointer;
+  /* Indicate buttons are clickable */
+}
+
+/* .next-button {
   width: 120px;
   height: 45px;
   font-size: 16px;
@@ -210,17 +326,20 @@
   text-decoration: none;
   font-size: 16px;
   border-radius: 10px;
-}
+} */
 
-.next-button:hover {
+
+
+/* .next-button:hover {
   background-color: #ffb703;
   transform: translateY(-2px);
   outline: none;
-}
+} */
 
-.next-button:active {
+/* .next-button:active {
   transform: translateY(0);
-}
+} */
+
 .next-button:focus {
   outline: none;
   /* box-shadow: 0 0 0 4px rgba(252, 163, 17, 0.5); */

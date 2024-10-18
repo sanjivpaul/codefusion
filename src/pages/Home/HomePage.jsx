@@ -26,6 +26,7 @@ import time from "../../assets/icons/time-adn-date.png";
 import bulb from "../../assets/icons/bulb.png";
 import pencil from "../../assets/icons/color-pencil.png";
 import { useNavigate} from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 
 const testimonials = [
   {
@@ -537,7 +538,7 @@ function HomePage() {
         </main>
       </section>
 
-      <section className="section-4">
+      {/* <section className="section-4">
         <div className="s4-footer">
           <div className="s4-copy-right">
             <FaRegCopyright />
@@ -567,7 +568,9 @@ function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <Footer/>
     </div>
   );
 }

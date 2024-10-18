@@ -58,11 +58,11 @@
   font-weight: 500;
   cursor: pointer;
 }
-ul li {
+/* ul li {
   padding: 20px;
   border-bottom: 1px solid var(--color-border);
   transition: 0.3s all;
-}
+} */
 
 .top-right {
   width: 25%;
