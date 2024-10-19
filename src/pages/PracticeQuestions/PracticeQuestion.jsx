@@ -29,15 +29,15 @@ function PracticeQuestion() {
           </div>
           {/* <button className="next-button">Next</button> */}
 
-          <div class="button-container" onClick={()=>handleNextClick(0)}>
+          <div class="button-container" onClick={() => handleNextClick(0)}>
             <button class="next-button" >Next</button>
             {showButtons[0] && (
               <div className="hidden-buttons">
-                <button className="btn" onClick={()=>{
+                <button className="btn" onClick={() => {
                   alert("Button one ")
-                }}>Button 1</button>
-                <button className="btn">Button 2</button>
-                <button className="btn">Button 3</button>
+                }}>C/C++</button>
+                <button className="btn">Python</button>
+                <button className="btn">Java</button>
               </div>
             )}
           </div>
@@ -48,15 +48,15 @@ function PracticeQuestion() {
           <div className="notes notes2">Rotate an array.</div>
           {/* <button className="next-button">Next</button> */}
 
-          <div class="button-container" onClick={()=>handleNextClick(1)}>
+          <div class="button-container" onClick={() => handleNextClick(1)}>
             <button class="next-button" >Next</button>
             {showButtons[1] && (
               <div className="hidden-buttons">
-                <button className="btn" onClick={()=>{
+                <button className="btn" onClick={() => {
                   alert("Button one ")
-                }}>Button 1</button>
-                <button className="btn">Button 2</button>
-                <button className="btn">Button 3</button>
+                }}>C/C++</button>
+                <button className="btn">Python</button>
+                <button className="btn">Java</button>
               </div>
             )}
           </div>
@@ -69,15 +69,15 @@ function PracticeQuestion() {
           </div>
           {/* <button className="next-button">Next</button> */}
 
-          <div class="button-container" onClick={()=>handleNextClick(2)}>
+          <div class="button-container" onClick={() => handleNextClick(2)}>
             <button class="next-button" >Next</button>
             {showButtons[2] && (
               <div className="hidden-buttons">
-                <button className="btn" onClick={()=>{
+                <button className="btn" onClick={() => {
                   alert("Button one ")
-                }}>Button 1</button>
-                <button className="btn">Button 2</button>
-                <button className="btn">Button 3</button>
+                }}>C/C++</button>
+                <button className="btn">Python</button>
+                <button className="btn">Java</button>
               </div>
             )}
           </div>
@@ -90,15 +90,15 @@ function PracticeQuestion() {
           </div>
           {/* <button className="next-button">Next</button> */}
 
-          <div class="button-container" onClick={()=>handleNextClick(3)}>
+          <div class="button-container" onClick={() => handleNextClick(3)}>
             <button class="next-button" >Next</button>
             {showButtons[3] && (
               <div className="hidden-buttons">
-                <button className="btn" onClick={()=>{
+                <button className="btn" onClick={() => {
                   alert("Button one ")
-                }}>Button 1</button>
-                <button className="btn">Button 2</button>
-                <button className="btn">Button 3</button>
+                }}>C/C++</button>
+                <button className="btn">Python</button>
+                <button className="btn">Java</button>
               </div>
             )}
           </div>
@@ -110,15 +110,15 @@ function PracticeQuestion() {
           {/* <button className="next-button">Next</button> */}
 
 
-          <div class="button-container" onClick={()=>handleNextClick(4)}>
+          <div class="button-container" onClick={() => handleNextClick(4)}>
             <button class="next-button" >Next</button>
             {showButtons[4] && (
               <div className="hidden-buttons">
-                <button className="btn" onClick={()=>{
+                <button className="btn" onClick={() => {
                   alert("Button one ")
-                }}>Button 1</button>
-                <button className="btn">Button 2</button>
-                <button className="btn">Button 3</button>
+                }}>C/C++</button>
+                <button className="btn">Python</button>
+                <button className="btn">Java</button>
               </div>
             )}
           </div>

@@ -14,11 +14,25 @@ import CourceTopic from "./pages/Cource/CourceTopic";
 import Array from "./pages/Cource/Array/Array";
 import YoutubeVidePlayer from "./components/YoutubeVideoPlayer/YoutubeVidePlayer";
 import PracticeQuestion from "./pages/PracticeQuestions/PracticeQuestion";
+import LoginModal from "./pages/Login/LoginModal";
+import { useEffect, useState } from "react";
 
 function App() {
   const navCollapse = useSelector((state) => state.sidebar.showSidebar);
+
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setModalOpen(true);
+    }, 5000); // Wait for 1 second
+
+    // Cleanup timeout if the component unmounts
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
+      {isModalOpen && <LoginModal onClose={() => setModalOpen(false)} />}
       <div className={`app-container ${navCollapse ? "navCollapse" : ""}`}>
         <div className="sidebar-content">
           <Sidebar />
@@ -33,8 +47,8 @@ function App() {
             <Route path="/feedback" element={<FeedbackPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/cource" element={<CourcePage />} />
-            <Route path="/cource/topics" element={<CourceTopic/>}/>
-            <Route path="/cource/topics/array" element={<Array/>}/>
+            <Route path="/cource/topics" element={<CourceTopic />} />
+            <Route path="/cource/topics/array" element={<Array />} />
             <Route path="/cource/details" element={<CourceDetails />} />
             <Route path="/cource/practice" element={<PracticeQuestion />} />
             <Route path="/note" element={<NotePage />} />
